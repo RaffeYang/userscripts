@@ -730,6 +730,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED38299BBEBF00E36A24 /* Mac-App.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Vite;
 		};
@@ -737,6 +738,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED32299BBEBF00E36A24 /* Mac-Safari-Extension.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Vite;
 		};
@@ -821,6 +823,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED32299BBEBF00E36A24 /* Mac-Safari-Extension.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Debug;
 		};
@@ -828,6 +831,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED32299BBEBF00E36A24 /* Mac-Safari-Extension.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -835,6 +843,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED38299BBEBF00E36A24 /* Mac-App.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Debug;
 		};
@@ -842,6 +851,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED38299BBEBF00E36A24 /* Mac-App.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
