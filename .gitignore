@@ -56,3 +56,10 @@ local
 # fastlane
 /fastlane/report.xml
 /fastlane/**/*.local.rb
+
+# bun
+bun.lockb
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
