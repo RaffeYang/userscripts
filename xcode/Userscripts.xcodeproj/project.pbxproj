@@ -730,6 +730,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED38299BBEBF00E36A24 /* Mac-App.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Vite;
@@ -738,6 +739,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED32299BBEBF00E36A24 /* Mac-Safari-Extension.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Vite;
@@ -760,6 +762,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED31299BBEBF00E36A24 /* Mac-Tests.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 			};
 			name = Vite;
 		};
@@ -767,6 +770,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED31299BBEBF00E36A24 /* Mac-Tests.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Debug;
 		};
@@ -774,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED31299BBEBF00E36A24 /* Mac-Tests.xcconfig */;
 			buildSettings = {
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 39CXH39XUK;
 			};
 			name = Release;
 		};
@@ -823,6 +828,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED32299BBEBF00E36A24 /* Mac-Safari-Extension.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Debug;
@@ -834,7 +840,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
@@ -843,6 +849,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7878ED38299BBEBF00E36A24 /* Mac-App.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Debug;
@@ -854,7 +861,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
