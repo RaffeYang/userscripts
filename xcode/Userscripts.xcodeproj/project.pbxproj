@@ -731,6 +731,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 039F59662B03AE5A002E9977 /* Userscripts-Vite.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Vite;
 		};
@@ -822,6 +823,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78391D4629A4CB3C00979E34 /* Userscripts-Debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Debug;
 		};
@@ -829,6 +831,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78391D4729A4CB3C00979E34 /* Userscripts-Release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 39CXH39XUK;
 			};
 			name = Release;
 		};
