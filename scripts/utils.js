@@ -35,8 +35,8 @@ import {
 const execFileAsync = promisify(execFile);
 
 /** Define shared constants */
-export const SAFARI_APP_RESOURCES = "xcode/App-Shared/Resources";
-export const SAFARI_EXT_RESOURCES = "xcode/Ext-Safari/Resources";
+export const APP_SHARED_RESOURCES = "xcode/App-Shared/Resources";
+export const EXT_SAFARI_RESOURCES = "xcode/Ext-Safari/Resources";
 
 /**
  * If not then cd to root dir and returns the path
@@ -59,7 +59,7 @@ export async function rootDir() {
  * @returns {Promise<boolean>}
  */
 export async function emptyBuildDir(dir) {
-	const buildPaths = ["dist", SAFARI_APP_RESOURCES, SAFARI_EXT_RESOURCES];
+	const buildPaths = ["dist", EXT_SAFARI_RESOURCES];
 	if (!buildPaths.includes(dir)) {
 		console.error("Non-build path, cannot be empty.");
 		return false;
@@ -191,4 +191,11 @@ export const baseConfig = {
 				"import.meta.env.GIT_TAG": JSON.stringify(gitTag),
 				"import.meta.env.GIT_COMMIT": JSON.stringify(gitCommit),
 			},
+	resolve: {
+		alias: {
+			// NOTE: Don't forget to modify the `paths` in `jsconfig.json` also
+			"@shared": fileURLToPath(new URL("../src/shared", import.meta.url)),
+			"@ext": fileURLToPath(new URL("../src/ext/shared", import.meta.url)),
+		},
+	},
 };

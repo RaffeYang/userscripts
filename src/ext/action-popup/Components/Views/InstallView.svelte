@@ -1,6 +1,6 @@
 <script>
-	import iconWarn from "../../../shared/img/icon-warn.svg?raw";
-	import iconError from "../../../shared/img/icon-error.svg?raw";
+	import iconWarn from "@shared/img/icon-warn.svg?raw";
+	import iconError from "@shared/img/icon-error.svg?raw";
 
 	export let userscript;
 	export let installError;
@@ -25,7 +25,7 @@
 			{#if userscript.match}
 				<li class="userscript--field">
 					<div>@match</div>
-					{#each userscript.match as match}
+					{#each userscript.match as match (match)}
 						<div class="truncate">{match}</div>
 					{/each}
 				</li>
@@ -33,7 +33,7 @@
 			{#if userscript.include}
 				<li class="userscript--field">
 					<div>@include</div>
-					{#each userscript.include as include}
+					{#each userscript.include as include (include)}
 						<div class="truncate">{include}</div>
 					{/each}
 				</li>
@@ -41,7 +41,7 @@
 			{#if userscript.require}
 				<li class="userscript--field">
 					<div>@require</div>
-					{#each userscript.require as require}
+					{#each userscript.require as require (require)}
 						<div class="truncate">{require}</div>
 					{/each}
 				</li>
@@ -49,7 +49,7 @@
 			{#if userscript.grant}
 				<li class="userscript--field">
 					<div>@grant</div>
-					{#each userscript.grant as grant}
+					{#each userscript.grant as grant (grant)}
 						<div>{grant}</div>
 					{/each}
 				</li>
@@ -129,7 +129,7 @@
 	}
 
 	.badge {
-		background-color: var(--color-black);
+		background-color: var(--color-bg-theme);
 		border-radius: var(--border-radius);
 		display: flex;
 		font: var(--text-small);
@@ -158,7 +158,7 @@
 	}
 
 	button {
-		background-color: #ffffffa6; /* -text-color-secondary */
+		background-color: var(--text-color-secondary);
 		border-radius: var(--border-radius);
 		color: var(--color-bg-primary);
 		flex-grow: 1;

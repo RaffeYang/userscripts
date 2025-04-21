@@ -12,6 +12,7 @@ import globals from "globals";
 import eslintPluginSvelte from "eslint-plugin-svelte";
 import eslintConfigPrettier from "eslint-config-prettier";
 
+/** @type {import("eslint").Linter.Config[]} */
 export default [
 	/**
 	 * @see {@link https://eslint.org/docs/latest/use/configure/configuration-files-new#using-predefined-configurations}
@@ -22,8 +23,8 @@ export default [
 	/**
 	 * @see {@link https://github.com/sveltejs/eslint-plugin-svelte}
 	 */
-	...eslintPluginSvelte.configs["flat/recommended"],
-	...eslintPluginSvelte.configs["flat/prettier"],
+	...eslintPluginSvelte.configs.recommended,
+	...eslintPluginSvelte.configs.prettier,
 
 	/**
 	 * @see {@link https://github.com/prettier/eslint-config-prettier}
@@ -40,7 +41,7 @@ export default [
 
 	/** @see {@link https://eslint.org/docs/latest/use/configure/migration-guide#configuring-language-options} */
 	{
-		files: ["scripts/**/*.js"],
+		files: ["*.js", "scripts/**/*.js"],
 		languageOptions: {
 			globals: {
 				...globals.node,
@@ -48,7 +49,7 @@ export default [
 		},
 	},
 	{
-		files: ["src/{app,dev}/**/*.{js,svelte}"],
+		files: ["src/{app,dev,shared}/**/*.{js,svelte}"],
 		languageOptions: {
 			globals: {
 				...globals.browser,

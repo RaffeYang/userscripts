@@ -1,11 +1,11 @@
 <script>
-	import { gl } from "../../../shared/utils.js";
+	import { gl } from "@ext/utils.js";
 	import { items, settings, state } from "../../store.js";
-	import { settingsDictionary } from "../../../shared/settings.js";
-	import Dropdown from "../../../shared/Components/Dropdown.svelte";
-	import IconButton from "../../../shared/Components/IconButton.svelte";
-	import iconSort from "../../../shared/img/icon-sort.svg?raw";
-	import iconClear from "../../../shared/img/icon-clear.svg?raw";
+	import { settingsDictionary } from "@ext/settings.js";
+	import Dropdown from "@shared/Components/Dropdown.svelte";
+	import IconButton from "@shared/Components/IconButton.svelte";
+	import iconSort from "@shared/img/icon-sort.svg?raw";
+	import iconClear from "@shared/img/icon-clear.svg?raw";
 
 	$: disabled = !$state.includes("ready");
 
@@ -46,7 +46,7 @@
 		{disabled}
 	/>
 	<Dropdown icon={iconSort} {disabled} title={gl("settings_editor_list_sort")}>
-		{#each orders as order}
+		{#each orders as order (order)}
 			<button
 				class:selected={sortOrder === order}
 				on:click={() => updateSortOrder(order)}
@@ -75,7 +75,7 @@
 	}
 
 	input {
-		background-color: var(--color-black);
+		background-color: var(--color-bg-theme);
 		border: none;
 		border-radius: var(--border-radius);
 		color: inherit;

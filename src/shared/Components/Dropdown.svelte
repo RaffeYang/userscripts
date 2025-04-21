@@ -4,6 +4,7 @@
 	export let icon = "plus";
 	export let disabled = false;
 	export let title;
+	export let right = false;
 
 	let active = false;
 
@@ -37,7 +38,7 @@
 
 <div class:active>
 	<IconButton {icon} on:click={dropdownClick} {title} {disabled} />
-	<ul>
+	<ul class:right>
 		<slot>
 			<li>At least one slot is required...</li>
 		</slot>
@@ -51,8 +52,8 @@
 	}
 
 	ul {
-		background-color: var(--color-black);
-		border: 1px solid black;
+		background-color: var(--color-bg-theme);
+		border: 1px solid var(--border-color);
 		border-radius: var(--border-radius);
 		box-shadow: var(--box-shadow);
 		color: var(--text-color-secondary);
@@ -63,6 +64,11 @@
 		position: absolute;
 		top: 100%;
 		white-space: nowrap;
+	}
+
+	ul.right {
+		left: auto;
+		right: 0;
 	}
 
 	.active ul {
@@ -94,24 +100,25 @@
 
 	ul :global(li:hover:not(.separator)) {
 		background-color: var(--color-blue);
-		color: var(--color-black);
+		color: light-dark(var(--color-white), var(--color-black));
 	}
 
 	ul :global(button) {
 		text-align: left;
 		background: none;
+		color: var(--text-color-primary);
 		width: 100%;
 		border-radius: 2px;
 		padding: 0.5rem 1rem;
 	}
 
 	ul :global(button.selected) {
-		color: var(--text-color-disabled);
+		/* color: var(--text-color-disabled); */
 	}
 
 	ul :global(button:hover) {
 		background-color: var(--color-blue);
-		color: var(--color-black);
+		color: light-dark(var(--color-white), var(--color-black));
 	}
 
 	ul :global(button:active) {
